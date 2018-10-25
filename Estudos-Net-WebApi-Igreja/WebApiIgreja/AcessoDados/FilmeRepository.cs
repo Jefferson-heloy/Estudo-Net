@@ -29,6 +29,15 @@ namespace WebApiIgreja.AcessoDados
         {
             return _myWebAppContext.Filmes.Where(p => p.Genero.ToUpper().Contains(genero)).ToList();
         }
+        public List<Filme> ObterFilmePorNome(string nome)
+        {
+            return _myWebAppContext.Filmes.Where(p => p.Nome.ToUpper().Contains(nome)).ToList();
+        }
+
+        public List<Filme> ObterFilmePorClassificacao(double classificacao)
+        {
+            return _myWebAppContext.Filmes.Where(p => p.Classificacao >= classificacao).ToList();
+        }
 
         public void Salvar(Filme filme)
         {

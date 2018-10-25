@@ -8,7 +8,7 @@ using WebApiIgreja.AcessoDados.Entidades;
 
 namespace WebApiIgreja.Controllers
 {
-    [Route("api/[Controller]")]
+    [Route("api/[Controller]/")]
     public class FilmeController : Controller
     {
         private readonly IFilmeRepository _filmeRepository;
@@ -46,7 +46,7 @@ namespace WebApiIgreja.Controllers
             }
         }
 
-        [HttpGet("{genero}")]
+        [HttpGet("genero={genero}")]
         public IActionResult Get(string genero)
         {
             try
@@ -59,6 +59,34 @@ namespace WebApiIgreja.Controllers
                 return BadRequest($"Erro: {ex.Message}");
             }
         }
+
+        [HttpGet("nome={nome}")]
+        public IActionResult GetNome(string nome)
+        {
+            try
+            {
+
+                return Ok(_filmeRepository.ObterFilmePorNome(nome));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro: {ex.Message}");
+            }
+        }
+        [HttpGet("classificacao={classificacao}")]
+        public IActionResult Get(double classificacao)
+        {
+            try
+            {
+
+                return Ok(_filmeRepository.ObterFilmePorClassificacao(classificacao));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro: {ex.Message}");
+            }
+        }
+
 
 
         [HttpPost]
