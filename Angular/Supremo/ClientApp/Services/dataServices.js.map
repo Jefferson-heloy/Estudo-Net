@@ -1,0 +1,1 @@
+{"version":3,"file":"dataServices.js","sourceRoot":"","sources":["dataServices.ts"],"names":[],"mappings":";;AAEA;IACE,sBAAoB,IAAgB;QAAhB,SAAI,GAAJ,IAAI,CAAY;QAG7B,aAAQ,GAAG;YAChB;gBACE,MAAM,EAAE,kBAAkB;gBAC1B,KAAK,EAAE,EAAE;aACV,EAAE;gBACD,MAAM,EAAE,iBAAiB;gBACzB,KAAK,EAAE,EAAE;aACV;SACF,CAAC;IATF,CAAC;IAUH,mBAAC;AAAD,CAAC,AAbD,IAaC;AAbY,oCAAY"}

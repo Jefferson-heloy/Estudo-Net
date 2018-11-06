@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="produto-info col-xs-4 well" *ngFor="let p of produtos">
+    <img src="https://i.zst.com.br/images/smartphone-lg-leon-h340-8gb-5-0-mp-android-5-0-lollipop-3g-4g-wi-fi-photo188645175-12-15-17.jpg" width="200" height="200" />
+    <h4>{{p.nome}}</h4>
+    <h2><strong>{{p.preco | currency:"R$ ":true}}</strong></h2>
+    <button id="meu-button" class="btn btn-success btn-sm"(click)="adicionarProduto(p)">Comprar</button>
+  </div>
+</div>
